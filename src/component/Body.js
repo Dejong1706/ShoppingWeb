@@ -41,6 +41,13 @@ export default function Body(){
 
     const [value, setValue] = useState(0);
 
+    const title = ["Lumier", "Deux feux", "La nuit"];
+    const content = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis nunc venenatis dolor ornare placerat. Duis varius dictum maximus. Maecenas ipsum est, convallis ut volutpat vitae, maximus nec nisi. Sed viverra, lorem fermentum maximus bibendum, enim magna mollis urna, id pretium tellus lorem id tellus. Fusce at eros quam.",
+    "Vivamus facilisis dui id elit dignissim, quis accumsan leo vestibulum. Nunc sit amet orci elit. Maecenas blandit, lacus sed condimentum suscipit, arcu purus consequat neque, nec blandit mauris enim at mi. Donec nec lacus eu lacus convallis vestibulum. Integer ultricies neque in nulla viverra rhoncus. Nullam vel lectus non felis maximus sagittis.",
+    "Quisque id nibh vel lorem dignissim vehicula eu vitae risus. Nunc posuere euismod leo vel pharetra. Etiam a diam metus. Vestibulum vehicula ipsum ultricies enim aliquet, non iaculis nisi placerat. Nullam semper eros ipsum, non suscipit dolor vulputate commodo. Praesent ultricies mauris eget metus luctus imperdiet. Morbi sed orci dictum, venenatis lorem at, ultricies quam. Praesent at ligula luctus, efficitur nulla eget, pulvinar augue."
+    ];
+
     useEffect(() => {
         const interval = setInterval(() => {
           setValue((v) => (v == 2  ? 0 : v + 1));
@@ -51,8 +58,8 @@ export default function Body(){
         <div>
             <div style = {{display: "flex", height: 1180}}>
                 <div className = "Main" style = {{width: 850}}>
-                    <p className = "title" style = {{fontSize: 124}}>Lumier</p>
-                    <p className = "content" style={{fontSize: 24}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis nunc venenatis dolor ornare placerat. Duis varius dictum maximus. Maecenas ipsum est, convallis ut volutpat vitae, maximus nec nisi. Sed viverra, lorem fermentum maximus bibendum, enim magna mollis urna, id pretium tellus lorem id tellus. Fusce at eros quam.</p>
+                    <p className = "title" style = {{fontSize: 124}}>{title[value]}</p>
+                    <p className = "content" style={{fontSize: 24}}>{content[value]}</p>
                     <ul>
                         <li><Link href = "reservation"><img src = {"images/" + btn1[value]}/></Link></li>
                         <li><img src = {"images/" + btn2[value]}/></li>

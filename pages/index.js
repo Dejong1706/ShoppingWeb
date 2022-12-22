@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
       <div className = "container" style = {{backgroundColor: colors[value], color: fontColors[fontValue]}}>
-        <Header/>
+        <Header cnt = "signIn"/>
         <Body/>
         <Footer/>
         <style jsx>{style}</style>
